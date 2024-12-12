@@ -1,18 +1,3 @@
-// Import the required modules
-const express = require('express');
-const app = express();
-
-// Define a route to check Armstrong number
-app.get('/armstrong', (req, res) => {
-    // Get the number from query parameters
-    const number = req.query.number;
-
-    // Validate the input
-    if (!number || isNaN(number)) {
-        return res.status(400).send({ error: "Please provide a valid number." });
-    }
-
-    // Convert the number to a string to process digits
     const digits = number.split('');
     const power = digits.length;
 
